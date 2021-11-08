@@ -15,14 +15,13 @@ window.onload = function () {
 
   new Swiper('.swp-main-banner', {
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     pagination: {
       el: '.swp-p-main-banner',
       type: 'fraction',
     },
   });
   new Swiper('.swp-buttons-quick-nav', {
-    // loop: true,
     slidesPerView: 4,
     spaceBetween: 5,
     slidesPerGroup: 4,
@@ -34,7 +33,6 @@ window.onload = function () {
   new Swiper('.swp-bottom-banner', {
     loop: true,
     effect: 'fade',
-    // autoplay: true,
     pagination: {
       el: '.swp-p-bottom-banner',
       clickable: true,
@@ -44,23 +42,22 @@ window.onload = function () {
   $('.button-like-plus').click(function () {
     $(this).toggleClass('button-like-plused');
   });
-
   
   function sort_data(_obj, _where) {
     $.each(_where, function (index, item) {
-      var temp_data = _obj[index];
+      let temp_data = _obj[index];
 
-      var temp_name = $(this).find('.best-product-name');
+      let temp_name = $(this).find('.best-product-name');
       temp_name.text(temp_data.product);
-      var temp_price = $(this).find('.best-product-price');
+      let temp_price = $(this).find('.best-product-price');
       temp_price.text(temp_data.price);
-      var temp_capacity = $(this).find('.best-capacity');
+      let temp_capacity = $(this).find('.best-capacity');
       temp_capacity.text(temp_data.capacity);
     });
   }
-  var button_color = $('.slide');
-  var button_generation = $('.best-navigation a');
-  var content_product = $('.best-product-text-wrapper');
+  let button_color = $('.slide');
+  let button_generation = $('.best-navigation a');
+  let content_product = $('.best-product-text-wrapper');
   // sort_data(product_data_all[1], content_product);
 
   
@@ -68,11 +65,10 @@ window.onload = function () {
     $(this).click(function (event) {
       event.preventDefault();
 
-      var temp = String(55 * index);
-      var temp_str = 'translateY(' + temp + "px)";
+      let temp = String(55 * index);
+      let temp_str = 'translateY(' + temp + "px)";
       button_color.css("transform", temp_str);
       button_color.css("transition", "all ease-in .25s");
-
       
       sort_data(product_data_all[index], content_product);
       button_generation.removeClass('b-nav-button-focus');
@@ -82,10 +78,10 @@ window.onload = function () {
   });
   
   // sort_data(product_data_2, content_product);
-  // var temp_y = index * 55;
+  // let temp_y = index * 55;
   // button_color.css("transform", "translateY(55px*index)");
   
-  var product_data_1 = [{
+  let product_data_1 = [{
     product: null,
     price: null,
     capacity: null
@@ -107,7 +103,7 @@ window.onload = function () {
     capacity: '(130ml)'
   }
   ];
-  var product_data_2 = [{
+  let product_data_2 = [{
     product: '식물성유산균쌀요거트',
     price: '2,000원',
     capacity: '(150ml)'
@@ -129,7 +125,7 @@ window.onload = function () {
     capacity: '(130ml)'
   }
   ];
-  var product_data_3 = [{
+  let product_data_3 = [{
     product: '위러브플러스',
     price: '2,600원',
     capacity: '(130ml)'
@@ -151,7 +147,7 @@ window.onload = function () {
     capacity: '(130ml)'
   }
   ];
-  var product_data_4 = [{
+  let product_data_4 = [{
     product: '위러브플러스',
     price: '2,600원',
     capacity: '(130ml)'
@@ -173,7 +169,7 @@ window.onload = function () {
     capacity: '(130ml)'
   }
   ];
-  var product_data_5 = [{
+  let product_data_5 = [{
     product: '위러브플러스',
     price: '2,600원',
     capacity: '(130ml)'
@@ -196,7 +192,7 @@ window.onload = function () {
   }
   ];
 
-  var product_data_all = [
+  let product_data_all = [
     product_data_1,
     product_data_2,
     product_data_3,

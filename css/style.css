@@ -177,8 +177,6 @@ body {
 }
 
 /* ------------------------------- */
-
-
 /* header */
 .header {
   position: fixed;
@@ -190,7 +188,6 @@ body {
 .header .sub-nav {
   position: relative;
   display: block;
-  /* width: 100%; */
   background: #EDEDED;
 }
 
@@ -512,7 +509,6 @@ body {
   width: 10px;
   height: 100px;
   border-left: 1px dashed #d8d8d8;
-  /* border-style: dotted solid; */
   border-width: 1px;
 }
 
@@ -599,6 +595,8 @@ body {
 }
 
 .product-price {
+  text-align: center;
+
   font-size: 1.7rem;
   font-weight: 300;
 }
@@ -882,7 +880,6 @@ body {
 .best-products>.best-product-first {
   display: block;
   width: 560px;
-  /* flex: 2 560px; */
 }
 
 .best-product-first .best-product-data img {
