@@ -58,8 +58,6 @@ window.onload = function () {
   let button_color = $('.slide');
   let button_generation = $('.best-navigation a');
   let content_product = $('.best-product-text-wrapper');
-  // sort_data(product_data_all[1], content_product);
-
   
   $.each(button_generation, function (index, item) {
     $(this).click(function (event) {
@@ -76,10 +74,6 @@ window.onload = function () {
       
     });
   });
-  
-  // sort_data(product_data_2, content_product);
-  // let temp_y = index * 55;
-  // button_color.css("transform", "translateY(55px*index)");
   
   let product_data_1 = [{
     product: null,
